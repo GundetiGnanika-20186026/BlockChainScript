@@ -1,0 +1,28 @@
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE")
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+apply plugin : 'org.springframework.boot'
+group 'BlockChainScript'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+//    compile("org.springframework.boot:spring-boot-starter-web")
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    runtimeOnly 'mysql:mysql-connector-java:8.0.25'
+}
